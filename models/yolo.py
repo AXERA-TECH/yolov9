@@ -218,7 +218,7 @@ class DualDDetect(nn.Module):
         self.dfl2 = DFL(self.reg_max)
 
     def forward(self, x):
-        if self.export:
+        if False and self.export:
             return self.forward_export(x)
 
         shape = x[0].shape  # BCHW
